@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F4F3F3"
+    android:orientation="horizontal"
+    android:paddingEnd="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingStart="16dp"
+    android:id="@+id/itemLayout"
+    >
+
+
+    <TextView
+        android:id="@+id/magnTextView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/magnitude_circle"
+        />
+
+    <TextView
+        android:id="@+id/approxLocationTextView"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:text="15 km NW of"
+        android:textSize="12sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/dateTextView"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/magnTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:maxLines="1"
+        />
+
+    <TextView
+        android:id="@+id/areaTextView"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:text="Los Angeles"
+        android:textSize="16sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dateTextView"
+        app:layout_constraintStart_toEndOf="@+id/magnTextView"
+        app:layout_constraintTop_toBottomOf="@+id/approxLocationTextView"
+        android:textAlignment="viewStart"/>
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="125dp"
+        android:layout_height="match_parent"
+        android:text="Feb 02, 2019"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/textColorEarthquakeDetails"/>
+
+</android.support.constraint.ConstraintLayout>
